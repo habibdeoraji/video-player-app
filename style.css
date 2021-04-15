@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;200;300;400&family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Source+Sans+Pro&display=swap');
+
+body {
+    margin: 0;
+    background-color: #54c3f0
+}
+
+#header {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 50px;
+    color: #fad744;
+    text-shadow: 2px 5px #2b3252;
+    font-size: 90px;
+    font-family: 'Caveat Brush', cursive;
+}
+
+
+#main-container {
+    background-color: #FFFFFF;
+    width: 70%;
+    min-height: 600px;
+    margin: 150px auto;
+    margin-top:30px;
+    padding: 20px 0;
+    display: flex;
+    border-radius: 5px;
+
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+#left-section {
+    width: 70%;
+    min-height: 100px;
+    padding: 0px 15px;
+    box-sizing: border-box;
+}
+
+/* Video-card-wrapper */
+
+#video-card-wrapper {
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    padding-top: 0;
+    border-bottom: 2px solid lightgray;
+}
+
+
+.video-card-iframe {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+
+/* VideoCard content Wrapper */
+.video-card-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px
+}
+
+.video-views{
+    color:gray;
+    font-weight: 300;
+}
+
+.is-video-like,
+.is-video-bookmark {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.video-title-description h1{
+    margin: 10px 0;
+    font-weight: bold;
+    padding: 0
+}
+
+.video-title-description p{
+    font-weight: 300;
+    letter-spacing:1px
+}
+
+
+
+#right-section {
+    width: 30%;
+    border-left: 1px solid lightgray;
+    min-height: 500px;
+    padding: 0px 15px;
+
+}
+
+
+/* Video Card */
+
+
+#right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.video-card {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: 4px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    /* box-shadow: 3px 2px 2px lightgray; */
+}
+
+.active {
+    border: 4px solid #fad745;
+}
+
+.video-thumnail {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+}
+
+.video-title {
+    padding: 15px 10px;
+    margin: 0;
+}
