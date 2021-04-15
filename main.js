@@ -1,13 +1,8 @@
 $(function () {
 
-    // var mainContainer = $('#main-container')[0];
-    // var leftSection = $('left-section')[0];
-    // var rightSection = $('right-section')[0];
-
-    // var demoData=
 
     // Right Section
-    $.get("http://5d76bf96515d1a0014085cf9.mockapi.io/playlist", function (videoThumnailList) {
+    $.get("https://6075a1380baf7c0017fa69e8.mockapi.io/habib/videoplayer", function (videoThumnailList) {
 
         for (var i = 0; i < videoThumnailList.length; i++) {
             videoCardRendered(videoThumnailList[i], i)
@@ -90,14 +85,52 @@ $(function () {
         isVideoLike.addClass("fas fa-heart is-video-like");
         if (videoDetailsList[pos].isLiked === "true" || videoDetailsList[pos].isLiked === true) {
             isVideoLike.css("color", "#fad745")
+        }else{
+            isVideoLike.css("color", "#ccc")
+
         }
+
+
+        // video like Dislike
+        isVideoLike.click(function(){
+            console.log(videoDetailsList[pos].isLiked)
+            console.log("Like button clicked")
+            if(videoDetailsList[pos].isLiked==="true"){
+                videoDetailsList[pos].isLiked="false";
+                isVideoLike.css("color", "#ccc")
+            }else{
+                videoDetailsList[pos].isLiked="true";
+             isVideoLike.css("color", "#fad745")
+
+            }
+        })
 
 
         var isVideoBookmark = $('<li>');
         isVideoBookmark.addClass("fas fa-bookmark is-video-bookmark");
         if (videoDetailsList[pos].isSaved === "true" ||videoDetailsList[pos].isSaved === true ) {
             isVideoBookmark.css("color", "#fad745")
+        }else{
+            videoDetailsList[pos].isSaved="true";
+         isVideoBookmark.css("color", "#ccc")
+
         }
+
+
+
+        // isVideo bookmarked
+        isVideoBookmark.click(function(){
+            console.log(videoDetailsList[pos].isLiked)
+            console.log("Like button clicked")
+            if(videoDetailsList[pos].isLiked==="true"){
+                videoDetailsList[pos].isLiked="false";
+                isVideoBookmark.css("color", "#ccc")
+            }else{
+                videoDetailsList[pos].isLiked="true";
+             isVideoBookmark.css("color", "#fad745")
+
+            }
+        })
 
         var likeBookmarkWrapper = $('<div>');
         likeBookmarkWrapper.addClass('like-bookmark-wrapper')
